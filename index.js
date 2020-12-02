@@ -16,7 +16,7 @@ fs.writeFile(filePath, content, { flag: 'a' }, function (err) {
 client.on('message', msg => {
     console.log(msg.author.username, " says ", msg.content);
 
-    writeToFile(msg.author.username + " says " +msg.content, "/tmp/discord_history.txt")
+    writeToFile(msg.author.username + " says " +msg.content + "<br />", "/tmp/discord_history.txt")
 
     if (msg.content === 'bonjour') {
         msg.reply('Salut ' + msg.author.username);
